@@ -1,0 +1,22 @@
+# +required Schema version of the component configuration YAML
+schemaVersion: "1.2"
+
+# +required List of endpoints to expose
+endpoints:
+    # +required Unique name for the endpoint
+    - name: ballerina-certificates-rest-endpoint-eb4
+      # +required Display name for the endpoint
+      displayName: Ballerina Certificates REST Endpoint
+      # +required Service configuration
+      service:
+        # +required Base path for the service
+        basePath: /certificates
+        # +required Numeric port value that gets exposed via this endpoint
+        port: 8080
+      # +required Type of the traffic this endpoint is accepting. Example: REST, GraphQL, GRPC
+      type: REST
+      # +optional Network level visibility of this endpoint. Defaults to Project
+      # Accepted values: Project|Organization|Public
+      networkVisibilities:
+        - Project
+        - Public
